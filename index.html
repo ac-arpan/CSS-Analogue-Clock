@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analogue Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  </head>
+
+  <body>
+    <i id="player" class="fa fa-play" style="color:white; padding-bottom: 2rem; font-size: 25px; cursor: pointer;" aria-hidden="true"></i>
+
+    <audio src="./song.mp3" loop></audio>
+
+    <div class="clock">
+      <div class="outer-circle"></div>
+      <div class="inner-circle"></div>
+      <div class="background-circle"></div>
+      <div class="center"></div>
+
+      <div class="hand-second"></div>
+      <div class="hand-minute"></div>
+      <div class="hand-hour"></div>
+
+      <div class="time c12">12</div>
+      <div class="time c3">3</div>
+      <div class="time c6">6</div>
+      <div class="time c9">9</div>
+
+      <div class="time-ex c1"><p>1</p></div>
+      <div class="time-ex c2"><p>2</p></div>
+      <div class="time-ex c4"><p>4</p></div>
+      <div class="time-ex c5"><p>5</p></div>
+      <div class="time-ex c7"><p>7</p></div>
+      <div class="time-ex c8"><p>8</p></div>
+      <div class="time-ex c10"><p>10</p></div>
+      <div class="time-ex c11"><p>11</p></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+
+</html>

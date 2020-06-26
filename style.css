@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --second-hand-position-initial:0deg;
+    --second-hand-position-final:360deg;
+    
+    --minute-hand-position-initial:0deg;
+    --minute-hand-position-final:360deg;
+
+    --hour-hand-position-initial:0deg;
+    --hour-hand-position-final:360deg;
+}
+body{
+    background:rgb(0, 0, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#player{
+    transition: all 2s ease-out;
+    opacity: 1;
+}
+.clock{
+    position: relative;
+    height: 320px;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-circle{
+    position: absolute;
+    height: 310px;
+    width: 310px;
+    box-shadow: 0px 0px 3px 3px rgb(45, 45, 56);
+    border-radius: 50%;
+}
+.inner-circle{
+    position: absolute;
+    height: 280px;
+    width: 280px;
+    background-color:rgb(0, 0, 12);
+    border: 6px solid grey;
+    border-radius: 50%;
+}
+.background-circle{
+    background: conic-gradient(
+        #55b7a4 0%,
+        #4ca493 40%,
+        #fff 40%,
+        #fff 60%,
+        #336d63 60%,
+        #2a5b52 100%
+    );
+    height: 310px;
+    width: 310px;
+    position: absolute;
+    z-index: -2;
+    border-radius: 50%;
+}
+.center{
+    position: absolute;
+    background-color: rgb(226, 226, 255);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+.hand-second{
+    position: absolute;
+    top:33px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 2px #ff0000;
+    height: 128px;
+    width: 6px;
+    transform-origin: bottom;
+}
+.hand-minute{
+    position: absolute;
+    top:49px;
+    border: 1px solid #2cd4d9;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 2px #2cd4d9;
+    height: 112px;
+    width: 8px;
+    transform-origin: bottom;
+}
+.hand-hour{
+    position: absolute;
+    top:66px;
+    border: 1px solid #2cd4d9;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 2px #2cd4d9;
+    height: 95px;
+    width: 9px;
+    transform-origin: bottom;
+}
+
+@keyframes rotate-second {
+    from{
+        transform: rotate(var(--second-hand-position-initial));
+    }
+    to{
+        transform: rotate(var(--second-hand-position-final));
+    }
+}
+
+@keyframes rotate-minute {
+    from{
+        transform: rotate(var(--minute-hand-position-initial));
+    }
+    to{
+        transform: rotate(var(--minute-hand-position-final));
+    }
+}
+
+@keyframes rotate-hour {
+    from{
+        transform: rotate(var(--hour-hand-position-initial));
+    }
+    to{
+        transform: rotate(var(--hour-hand-position-final));
+    }
+}
+
+.time{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2cd4d9;
+    font-size: 22px;
+}
+.c12{
+    top:27px;
+}
+.c3{
+    right: 29px;
+}
+.c6{
+    bottom:27px;
+}
+.c9{
+    left:29px;
+}
+
+.time-ex{
+    position: absolute;
+    top:27px;
+    height: 128px;
+    width: 8px;
+    font-size: 22px;
+    color: #2cd4d9;
+}
+.c1{
+    transform-origin: bottom;
+    transform: rotate(30deg);
+}
+.c1 p{
+    transform: rotate(-30deg);
+}
+.c2{
+    transform-origin: bottom;
+    transform: rotate(60deg);
+}
+.c2 p{
+    transform: rotate(-60deg);
+}
+.c4{
+    transform-origin: bottom;
+    transform: rotate(120deg);
+    top:23px;
+    height: 136px;
+}
+.c4 p{
+    transform: rotate(-120deg);
+}
+.c5{
+    transform-origin: bottom;
+    transform: rotate(150deg);
+    top:23px;
+    height: 136px;
+}
+.c5 p{
+    transform: rotate(-150deg);
+}
+.c7{
+    transform-origin: bottom;
+    transform: rotate(210deg);
+    height: 137px;
+    top:22px
+}
+.c7 p{
+    transform: rotate(-210deg);
+}
+.c8{
+    transform-origin: bottom;
+    transform: rotate(240deg);
+    height: 141px;
+    top:16px;
+}
+.c8 p{
+    transform: rotate(-240deg);
+}
+.c10{
+    transform-origin: bottom;
+    transform: rotate(300deg);
+    height: 144px;
+    top:22px;
+}
+.c10 p{
+    transform: rotate(-300deg);
+}
+.c11{
+    transform-origin: bottom;
+    transform: rotate(330deg);
+    top:26px;
+    height: 148px;
+}
+.c11 p{
+    transform: rotate(-330deg);
+}
