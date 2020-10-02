@@ -28,7 +28,7 @@ body{
 .clock{
     position: relative;
     height: 320px;
-    width: 320px;
+    width: 321px;
     display: flex;
     justify-content: center;
     align-items: center;
