@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   const audio = document.getElementsByTagName('audio')[0]
   
   //Play the audio onClick on the player
-  const player = document.getElementById("player")
+  const player = document.querySelector("#player")
   player.addEventListener('click', () => {
     audio.play()
     setTimeout(() => {
